@@ -11,22 +11,22 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        int numberOfInterations = 1;
+        int numberOfInterations = 0;
         int sum = 0;
-        int average = 0;
+        long average = 0;
 
         while(true){
             boolean isAnInt = scanner.hasNextInt();
             if(isAnInt){
                 int number = scanner.nextInt();
                 sum += number;
-                average = sum/numberOfInterations;
+
             }else{
                 break;
             }
             numberOfInterations++;
         }
-
+        average = Math.round((double)sum/ (double)numberOfInterations);
         System.out.println("SUM = " + sum + " AVG = " + average);
 
         scanner.close();
